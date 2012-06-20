@@ -1,0 +1,342 @@
+/*
+Theme Name: Slow Food Columbus
+Theme URI: http://mediatoybox.com
+Author: Adam Schweigert
+Author URI: http://mediatoybox.com
+Description: A responsive WordPress Theme for Slow Food Columbus built using Twitter Bootstrap.
+Version: 1.0
+License: GNU General Public License
+*/
+
+
+/* some typography tweaks */
+body {
+	font-size:15px;
+	line-height:21px;
+	font-family: Georgia, Times, serif;
+}
+h1,h2,h3,h4,h5,h6,
+.btn {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p {
+	margin:0 0 15px;
+}
+li {
+	line-height:21px;
+	margin-bottom:4px;
+}
+h1.entry-title {
+	margin-bottom:0.5em;
+}
+.entry-content h3 {
+	margin-bottom:0.5em;
+}
+
+/* helper classes */
+
+.clear {
+	clear:both;
+}
+/* required wordpress post photo styles */
+
+.entry-content .alignright {
+	float:right;
+	margin: 0 0 10px 10px;
+}
+.entry-content .alignleft {
+	float:left;
+	margin: 0 10px 10px 0;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/*style and layout adjustments */
+.wrapper {
+	margin:0 auto;
+	max-width:1170px;
+}
+.span12,
+.span8 {
+	margin-left:0;
+}
+.header-grp {
+	width:100%;
+	margin: 30px 0;
+}
+#mainnav {
+	clear:both;
+}
+ul.nav {
+	padding-top:3px;
+}
+.navbar-search {
+	margin-top:9px;
+}
+.navbar .nav {
+	font-size:16px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar .nav > li > a {
+	color:#ddd;
+}
+.nav-pills > li > a {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+}
+.nav-label {
+	padding: 7px 4px 7px 12px;
+	text-transform:uppercase;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+	float:left;
+}
+.events-nav-1,
+.events-nav-2 {
+	float:left;
+}
+img.header-image {
+	 margin-bottom:8px;
+	 -webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	 border-radius: 4px;
+}
+.well.spotlight {
+	background-color: #bae3c8;
+}
+#footer {
+	margin-bottom:50px;
+}
+
+/* add support for second level dropdown menus */
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: 25px;
+}
+.dropdown-menu .icon-arrow-right {
+	position:relative;
+	top:2px; 
+	left:5px;
+}
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+    display: block;
+}
+
+.navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+}
+.navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+}
+
+/* social icons */
+
+ul.social-icons {
+	margin:7px 0 0 20px;
+	list-style:none;
+}
+ul.social-icons li {
+	display:inline;
+}
+.social-icons > li > a {
+	padding:0;
+}
+.social-icons > li > a:hover {
+	opacity:0.8;
+}
+.social-icons img {
+	width:32px;
+	height:32px;
+}
+
+/* make the masthead responsive */
+img.logo {
+	display:block;
+	float:none;
+	margin:10px auto;
+}
+img.slowfood {
+	display:block;
+	float:none;
+	margin:10px auto;
+	width:75%;
+}
+img.columbus {
+	display:block;
+	float:none;
+	margin:10px auto;
+	width:40%;
+	padding-top:0;
+}
+
+/* homepage carousel */
+.carousel-caption h4 {
+	 font-size:1.2em;
+	 margin-bottom:0.4em;
+ }
+.carousel-caption p {
+	 margin-bottom:0.8em;
+ }
+.carousel-caption p.btn a {
+ 	color:#fff;
+}
+.carousel-caption p.btn a:hover {
+ 	text-decoration:none;
+}
+
+/* sidebar widgets */
+
+#sidebar .widget {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: whiteSmoke;
+	border: 1px solid #EEE;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px 
+	rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* the media queries */
+
+@media screen and (max-width: 480px) {
+	.sub-menu,
+	.navbar i.icon-arrow-right,
+	.dropdown-menu li:hover .sub-menu {
+	    visibility: hidden;
+	    display: none;
+    }
+    ul.social-icons {
+    	clear:both;
+    	float:left;
+    	margin:0 0 10px 10px;
+    }
+    .navbar-search {
+    	clear:both;
+    	float:left;
+    }
+   .nav-label {
+		padding-left:0;
+	}
+	.events-nav-1 {
+		margin:4px auto;
+		width:auto;
+		text-align:center;
+		float:none;
+		margin-top:-4px;
+	}
+	.events-nav-1 li {
+		width:50%;
+	}
+	.events-nav-2 {
+		clear:both;
+		margin-left:10px;
+	}
+	.events-nav-2 .nav-label {
+		display:block;
+		clear:both;
+		width:100%;
+		text-align:center;
+	}
+	.events-nav-2 span {
+		width:100%;
+	}
+	.events-nav-2 li {
+		width:20%;
+		text-align:center;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+	img.slowfood {
+		width:65%;
+	}
+	img.columbus {
+		width:35%;
+	}
+	.sub-menu,
+	.navbar i.icon-arrow-right,
+	.dropdown-menu li:hover .sub-menu {
+    	visibility: hidden;
+    	display: none;
+    }
+    ul.social-icons {
+    	margin:10px 0 10px 10px;
+    }
+    .nav-label {
+		padding-left:0;
+	}
+	.nav.events-nav-1 {
+		margin-bottom:4px;
+	}
+	.events-nav-2 {
+		clear:both;
+		margin-left:12px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+
+	img.slowfood {
+		width:65%;
+	}
+	img.columbus {
+		width:35%;
+	}
+	ul.social-icons {
+    	margin:10px 0 10px 10px;
+    }
+    .nav-label {
+		padding-left:0;
+	}
+	.nav.events-nav-1 {
+		margin-bottom:4px;
+	}
+	.events-nav-2 {
+		clear:both;
+		margin-left:12px;
+	}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+	 .nav-label {
+		padding-left:0;
+	}
+	.nav.events-nav-1 {
+		margin-bottom:4px;
+	}
+	.events-nav-2 {
+		clear:both;
+		margin-left:12px;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
