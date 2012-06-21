@@ -1,12 +1,7 @@
 <?php
-        // Translations can be filed in the /languages/ directory
-        load_theme_textdomain( 'bootstrap', TEMPLATEPATH . '/languages' );
- 
-        $locale = get_locale();
-        $locale_file = TEMPLATEPATH . "/languages/$locale.php";
-        if ( is_readable($locale_file) )
-            require_once($locale_file);
-	
+     
+    require_once( TEMPLATEPATH . '/theme-settings.php' );
+     	
 	// Add RSS links to <head> section
 	automatic_feed_links();
 
@@ -32,6 +27,24 @@
     
     add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
     
+    
+    // Add a custom post type for the homepage carousel
+    add_action( 'init', 'create_post_type' );
+    
+    function create_post_type() {
+		register_post_type( 'sf_homepage-banner',
+			array(
+				'labels' => array(
+					'name' => __( 'Homepage Banners' ),
+					'singular_name' => __( 'Homepage Banner' )
+					),
+					'public' => true,
+					'has_archive' => true,
+				)
+			);
+	}
+    
+    // Hide the admin sidebar (for now)
     add_filter( 'show_admin_bar', '__return_false' );
 
 ?>
