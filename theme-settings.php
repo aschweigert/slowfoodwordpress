@@ -29,13 +29,14 @@ function slowfood_settings_init() {
 	add_settings_section( 'slowfood_links', 'Header Links', '__return_false', 'slowfood' );
 
 	$fields = array(
+		'rss' => 'Link to RSS Feed',
 		'facebook' => 'Link to Facebook Profile',
 		'twitter' => 'Link to Twitter Page',
 		'youtube' => 'Link to YouTube Page',
 		'flickr' => 'Link to Flickr Page',
 		'gplus' => 'Link to Google Plus Page',
 		'pinterest' => 'Link to Pinterest Profile',
-		'podcast' => 'Link to Podcast Feed',
+		'linkedin' => 'Link to LinkedIn Profile or Group'
 	);
 
 	foreach ( $fields as $field => $title ) {
