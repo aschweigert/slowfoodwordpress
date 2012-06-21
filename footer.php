@@ -7,7 +7,6 @@
 	  
     </div><!--/.fluid-container-->
     
-    
     <?php wp_footer(); ?>
     
     <script src="<?php bloginfo('template_directory'); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
