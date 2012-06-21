@@ -128,11 +128,13 @@
     		<a href="/"><img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/SFC-banner-web.png" /></a>
     	</div>
     	<div class="header-grp hidden-desktop">
-	    	<a href="/"><img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/snail-180-120.png" />
-	    	<div class="header-text">
-	    		<img class="slowfood" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/slow-food-768-124.png" />
-	    		<img class="columbus" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/columbus-541-124.png" />
-	    	</div></a>
+	    	<a href="/">
+	    		<img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/snail-180-120.png" />
+	    		<div class="header-text">
+	    			<img class="slowfood" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/slow-food-768-124.png" />
+	    			<img class="columbus" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/columbus-541-124.png" />
+	    		</div>
+	    	</a>
     	</div>
     	
     	<?php get_template_part( 'navbar' ); ?>
