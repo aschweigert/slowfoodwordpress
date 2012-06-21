@@ -1,4 +1,4 @@
-		<nav class="navbar" role="main">
+		<nav class="navbar">
 	    	<div class="navbar-inner">
 	          <div class="container">
 		          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -65,10 +65,71 @@
 			      		<li><a href="<?php bloginfo('url'); ?>/contact/">Contact</a></li>
 			      	</ul>
 		          	<ul class="social-icons pull-right">
-		          		<li><a href="/feed/" target="_blank"><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/social-icons/rss.png" alt="" /></a>
-		          		<li><a href="https://www.facebook.com/pages/Slow-Food-Columbus/139992052698940" target="_blank"><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/social-icons/facebook.png" alt="" /></a>
-		          		<li><a href="https://twitter.com/SlowFoodCMH" target="_blank"><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/social-icons/twitter.png" alt="" /></a>
-		          		<li><a href="http://pinterest.com/cbusadventures/slow-food-columbus/" target="_blank"><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/social-icons/pinterest.png" alt="" /></a>
+		          		
+		          		<?php if ( get_option( 'rss_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'rss_link' ) ); ?>" title="RSS">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/rss.png" alt="rss-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+						
+		          		<?php if ( get_option( 'facebook_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'facebook_link' ) ); ?>" title="Facebook">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/facebook.png" alt="facebook-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+			
+						<?php if ( get_option( 'twitter_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'twitter_link' ) ); ?>" title="twitter">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/twitter.png" alt="twitter-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+			
+						<?php if ( get_option( 'youtube_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'youtube_link' ) ); ?>" title="youtube">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/youtube.png" alt="youtube-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+			
+						<?php if ( get_option( 'flickr_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'flickr_link' ) ); ?>" title="flickr">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/flickr.png" alt="flickr-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+			
+						<?php if ( get_option( 'gplus_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'gplus_link' ) ); ?>" title="gplus">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/googleplus_black.png" alt="gplus-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+						
+						<?php if ( get_option( 'pinterest_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'pinterest_link' ) ); ?>" title="pinterest">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/pinterest.png" alt="pinterest-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+						
+						<?php if ( get_option( 'linkedin_link' ) ) : ?>
+							<li>
+								<a href="<?php echo esc_url( get_option( 'linkedin_link' ) ); ?>" title="linkedin">
+									<img src="<?php bloginfo('template_directory'); ?>/assets/img/social-icons/linkedin.png" alt="linkedin-fav" />
+								</a>
+							</li>
+						<?php endif; ?>
+
 		          	</ul>
 			        <form method="get" name="searchform" id="searchform" action="<?php bloginfo('url'); ?>/" class="navbar-search form-inline pull-right">
 				        <input type="text" value="" name="s" id="query" placeholder="Search" />

@@ -7,7 +7,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head id="mediatoybox-com" data-template-set="bootstrap-wordpress-theme" profile="http://gmpg.org/xfn/11">
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
     
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -40,26 +40,7 @@
 	
 	 <?php global $ids, $page, $paged; ?>
     
-    <meta name="title" content="<?php
-		      if (function_exists('is_tag') && is_tag()) {
-		         single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
-		      elseif (is_archive()) {
-		         wp_title(''); echo ' Archive - '; }
-		      elseif (is_search()) {
-		         echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
-		      elseif (!(is_404()) && (is_single()) || (is_page())) {
-		         wp_title(''); echo ' - '; }
-		      elseif (is_404()) {
-		         echo 'Not Found - '; }
-		      if (is_home()) {
-		         bloginfo('name'); echo ' - '; bloginfo('description'); }
-		      else {
-		          bloginfo('name'); }
-		      if ($paged>1) {
-		         echo ' - page '. $paged; }
-		   ?>">
-	
-	<meta name="description" content="<?php bloginfo('description'); ?>">
+   	<meta name="description" content="<?php bloginfo('description'); ?>">
 	
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     
@@ -105,9 +86,6 @@
 	    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	    <meta property="og:description" content="<?php bloginfo('description'); ?>" />
 	<?php } ?>
-	
-	
-	
 
     <?php wp_head(); ?>
   
@@ -125,14 +103,16 @@
     	<?php } ?>
     	
     	<div class="header-grp visible-desktop">
-    		<a href="/"><img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/SFC-banner-web.png" /></a>
+    		<a href="/"><img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/SFC-banner-web.png" alt="slow food columbus" /></a>
     	</div>
     	<div class="header-grp hidden-desktop">
-	    	<a href="/"><img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/snail-180-120.png" />
-	    	<div class="header-text">
-	    		<img class="slowfood" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/slow-food-768-124.png" />
-	    		<img class="columbus" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/columbus-541-124.png" />
-	    	</div></a>
+	    	<a href="/">
+	    		<img class="logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/snail-180-120.png" alt="slow food columbus" />
+	    		<div class="header-text">
+	    			<img class="slowfood" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/slow-food-768-124.png" alt="" />
+	    			<img class="columbus" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/columbus-541-124.png" alt="" />
+	    		</div>
+	    	</a>
     	</div>
     	
     	<?php get_template_part( 'navbar' ); ?>

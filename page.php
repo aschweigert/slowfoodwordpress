@@ -9,7 +9,7 @@
    					<img class="header-image" src="<?php echo $header_image; ?>" alt="<?php the_title(); ?>" />
    				<?php } ?>
    				
-   			<article class="hnews hentry item <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+   			<article <?php post_class('hnews hentry item') ?> id="post-<?php the_ID(); ?>">
 			
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 

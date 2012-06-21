@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-   	 <div id="main" class="row-fluid span12">
-     	
-     	<?php get_template_part( 'carousel' ); ?>
-     	
+   	   <div class="row-fluid span12">
+     		<?php get_template_part( 'carousel' ); ?>
+   	   </div>
+   	   
        <div class="row-fluid">
          <div class="span4">
          	<div class="well spotlight">
@@ -12,7 +12,7 @@
          	</div>
          	<div class="well">
             	<p><strong>Our mission</strong> is to bring people together to enjoy the pleasures of the table while carrying out the Slow Food mission at the local level: to defend biodiversity in our food supply, spread taste education and connect producers of excellent foods with co-producers through events and initiatives.</p>
-            	<p class="more_link"><a href="/about/">Learn&nbsp;More&nbsp;<span class="meta-nav">&rarr;</a></p>
+            	<p class="more_link"><a href="/about/">Learn&nbsp;More&nbsp;&rarr;</a></p>
          	</div>
          </div><!--/span-->
          <div class="span4">
@@ -43,7 +43,7 @@
            <?php endwhile; ?>
            <?php endif; ?>
            </ul>
-           <p class="more_link"><a href="/events/">More&nbsp;Events&nbsp;<span class="meta-nav">&rarr;</a></p>
+           <p class="more_link"><a href="/events/">More&nbsp;Events&nbsp;&rarr;</a></p>
          </div><!--/span-->
          <div class="span4">
          	<div class="well">
@@ -72,7 +72,7 @@
 			
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			<?php the_excerpt(); ?>
-			<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;Reading&nbsp;<span class="meta-nav">&rarr;</a></p>
+			<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;Reading&nbsp;&rarr;</a></p>
            
 			<?php endwhile; ?>
 			<?php endif; ?>

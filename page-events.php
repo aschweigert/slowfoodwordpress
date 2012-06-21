@@ -8,21 +8,19 @@ Template Name: Events
 <div class="row-fluid">
    		<div class="span8">
 
-   			<img class="header-image" src="<?php echo get_post_meta('1331', 'header_image', true); ?>" alt="<?php the_title(); ?>" />
+   			<img class="header-image" src="<?php echo get_post_meta('1331', 'header_image', true); ?>" alt="<?php the_title(); ?>" />-
    					
    			<ul class="nav nav-pills events-nav-1">
-		    	<li <?php if (is_page('1331')){ echo " class=\"active\"";} ?>><a href="/events/">Upcoming Events</a></li>
-		    	<li <?php if (is_page('1410')){ echo " class=\"active\"";} ?>><a href="/events/event-proposal/">Propose an Event</a></li>
+		    	<li <?php if (is_page('1331')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/">Upcoming Events</a></li>
+		    	<li <?php if (is_page('1410')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/event-proposal/">Propose an Event</a></li>
    			</ul>   			
    			<ul class="nav nav-pills events-nav-2">
-   				<li class="nav-label">Past Events:</h4>
-		    	<span>
-			    	<li <?php if (is_page('1394')){ echo " class=\"active\"";} ?>><a href="/events/2012-events/">2012</a></li>
-				    <li <?php if (is_page('1357')){ echo " class=\"active\"";} ?>><a href="/events/2011-events/">2011</a></li>
-				    <li <?php if (is_page('1351')){ echo " class=\"active\"";} ?>><a href="/events/2010-events/">2010</a></li>
-				    <li <?php if (is_page('1342')){ echo " class=\"active\"";} ?>><a href="/events/2009-events/">2009</a></li>
-				    <li <?php if (is_page('1333')){ echo " class=\"active\"";} ?>><a href="/events/2008-events/">2008</a></li>
-		    	</span>
+   				<li class="nav-label">Past Events:</li>
+				<li <?php if (is_page('1394')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/2012-events/">2012</a></li>
+				<li <?php if (is_page('1357')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/2011-events/">2011</a></li>
+				<li <?php if (is_page('1351')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/2010-events/">2010</a></li>
+				<li <?php if (is_page('1342')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/2009-events/">2009</a></li>
+				<li <?php if (is_page('1333')){ echo " class=\"active\"";} ?>><a href="<?php bloginfo('url'); ?>/events/2008-events/">2008</a></li>
 		    </ul>
    			
    			<?php if (is_page('1331')) { ?>
@@ -44,7 +42,7 @@ Template Name: Events
 								<?php edit_post_link('edit post', ' - ', ''); ?>
 							</p>
 							<?php the_excerpt(); ?>
-							<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;reading&nbsp;<span class="meta-nav">&rarr;</a></p>
+							<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;reading&nbsp;&rarr;</a></p>
 						</div>
 						<hr>
 					<?php endforeach; } ?>
@@ -53,9 +51,9 @@ Template Name: Events
    				
    			<?php } else if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-   			<article class="hnews hentry item clear <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+   			<article <?php post_class('hnews hentry item') ?> id="post-<?php the_ID(); ?>">
 			
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title clear"><?php the_title(); ?></h1>
 
 				<div class="entry-content">
 				
