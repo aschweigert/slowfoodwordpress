@@ -9,7 +9,7 @@
 					<?php the_date( 'F j, Y', '<p class="story_date">', '</p>', true ); ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<?php the_excerpt(); ?>
-					<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;reading&nbsp;<span class="meta-nav">&rarr;</a></p>
+					<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;reading&nbsp;&rarr;</a></p>
 					<?php edit_post_link('edit post', '', ''); ?>
 				</div>
 			<?php endwhile; ?>

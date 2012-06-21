@@ -4,12 +4,12 @@
    		<div class="span8">
    			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-   			<article class="hnews hentry item <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+   			<article <?php post_class('hnews hentry item') ?> id="post-<?php the_ID(); ?>">
 			
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				
 				<p class="meta">
-					<i>Posted on:</i> <time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('F jS, Y') ?></time>
+					<i>Posted on:</i> <time datetime="<?php echo date(DATE_W3C); ?>" class="updated"><?php the_time('F jS, Y') ?></time>
 					<span class="byline author vcard">
 						<i>by</i> <span class="fn"><?php the_author_posts_link() ?></span><?php edit_post_link('Edit this entry',' - ','.'); ?>
 					</span>
