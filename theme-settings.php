@@ -49,8 +49,7 @@ function slowfood_settings_init() {
 add_action( 'admin_init', 'slowfood_settings_init' );
 
 function slowfood_settings_section_callback() {
-    echo '<p>The following fields are <strong>optional</strong>, but you may use them to add additional information about your site.</p>
-    	<p>Note: To change social media settings for a user, view their edit profile screen.</p>';
+    echo '<p>The following fields are <strong>optional</strong> and are used to show the social media links in the top navigation bar.</p>';
 }
 
 function slowfood_settings_field_link_callback( $args ) {
