@@ -47,14 +47,14 @@
 					
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p class="meta">
-						<i>Posted on:</i> <time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('F jS, Y') ?></time>
+						<i>Posted on:</i> <time datetime="<?php echo date(DATE_W3C); ?>" class="updated"><?php the_time('F jS, Y') ?></time>
 						<span class="byline author vcard">
 							<i>by</i> <span class="fn"><?php the_author() ?></span>
 						</span>
 						<?php edit_post_link('edit post', ' - ', ''); ?>
 					</p>
 					<?php the_excerpt(); ?>
-					<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;reading&nbsp;<span class="meta-nav">&rarr;</a></p>
+					<p class="more_link"><a href="<?php the_permalink(); ?>">Continue&nbsp;reading&nbsp;&rarr;</a></p>
 				</div>
 				<hr>
 			<?php endwhile; ?>
